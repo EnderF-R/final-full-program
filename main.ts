@@ -8,13 +8,6 @@ basic.showLeds(`
     `)
 basic.forever(function () {
     if (hummingbird.getSensor(SensorType.Dial, ThreePort.Two) > 1) {
-        music.playMelody("C5 E C5 F C5 G C5 A ", 150)
-    } else {
-    	
-    }
-})
-basic.forever(function () {
-    if (hummingbird.getSensor(SensorType.Dial, ThreePort.Two) > 1) {
         hummingbird.setPositionServo(FourPort.Two, 180)
     } else if (hummingbird.getSensor(SensorType.Light, ThreePort.One) >= 10) {
         hummingbird.setPositionServo(FourPort.Two, 180)

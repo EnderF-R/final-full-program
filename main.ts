@@ -12,7 +12,7 @@ basic.forever(function () {
     } else if (hummingbird.getSensor(SensorType.Light, ThreePort.One) >= 10) {
         hummingbird.setPositionServo(FourPort.Two, 180)
     } else {
-        hummingbird.setPositionServo(FourPort.Two, 0)
+        hummingbird.setPositionServo(FourPort.Two, 135)
     }
 })
 basic.forever(function () {

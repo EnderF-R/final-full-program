@@ -7,6 +7,11 @@ basic.showLeds(`
     . . . . .
     `)
 basic.forever(function () {
+    hummingbird.setLED(ThreePort.One, 100)
+    hummingbird.setLED(ThreePort.Two, 100)
+    hummingbird.setLED(ThreePort.Three, 100)
+})
+basic.forever(function () {
     if (hummingbird.getSensor(SensorType.Dial, ThreePort.Two) > 1) {
         hummingbird.setPositionServo(FourPort.Two, 180)
     } else if (hummingbird.getSensor(SensorType.Light, ThreePort.One) >= 10) {
@@ -26,7 +31,7 @@ basic.forever(function () {
     }
 })
 basic.forever(function () {
-    if (hummingbird.getSensor(SensorType.Dial, ThreePort.Two) > 10) {
+    if (hummingbird.getSensor(SensorType.Dial, ThreePort.Two) > 1) {
         hummingbird.setTriLED(
         TwoPort.One,
         100,

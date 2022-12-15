@@ -13,11 +13,11 @@ basic.forever(function () {
 })
 basic.forever(function () {
     if (hummingbird.getSensor(SensorType.Dial, ThreePort.Two) > 1) {
-        hummingbird.setPositionServo(FourPort.Two, 180)
+        hummingbird.setPositionServo(FourPort.Two, 140)
     } else if (hummingbird.getSensor(SensorType.Light, ThreePort.One) >= 10) {
-        hummingbird.setPositionServo(FourPort.Two, 180)
+        hummingbird.setPositionServo(FourPort.Two, 145)
     } else {
-        hummingbird.setPositionServo(FourPort.Two, 135)
+        hummingbird.setPositionServo(FourPort.Two, 180)
     }
 })
 basic.forever(function () {
@@ -26,7 +26,7 @@ basic.forever(function () {
     } else {
         hummingbird.setPositionServo(FourPort.One, 180)
         basic.pause(300)
-        hummingbird.setPositionServo(FourPort.One, 20)
+        hummingbird.setPositionServo(FourPort.One, 0)
         basic.pause(300)
     }
 })
